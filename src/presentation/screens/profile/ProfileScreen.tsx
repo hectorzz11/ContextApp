@@ -7,6 +7,7 @@ export const ProfileScreen = () => {
 
   const name = useProfileStore(state => state.name);
   const email = useProfileStore(state => state.email);
+  const changeProfile = useProfileStore(state => state.changeProfile);
 
   const age = useProfileStore(state => state.age);
 
@@ -25,9 +26,10 @@ export const ProfileScreen = () => {
 
         <Pressable
           style={styles.primaryButton}
-          onPress={()=>useProfileStore.setState({email: 'hectorzz11@hotmail.com'})}
+          onPress={()=>changeProfile('John Doe', 'john.d@gmail.com', 35)}
           >
-          <Text>cambiar email</Text>
+          <Text>Regresar a anterior</Text>
+
         </Pressable>
         <Pressable
           style={styles.primaryButton}

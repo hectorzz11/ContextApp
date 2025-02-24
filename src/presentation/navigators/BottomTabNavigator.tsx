@@ -6,6 +6,7 @@ import { ProfileScreen } from '../screens/profile/ProfileScreen';
 const Tab = createBottomTabNavigator();
 
 export const BottomTabNavigator = ()=> {
+
   return (
     <Tab.Navigator>
       <Tab.Screen name="Home" component={HomeScreen} />
